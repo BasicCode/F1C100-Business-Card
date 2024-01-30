@@ -9,7 +9,7 @@ A simple business-card sized system based on an F1C100 SoC featuring:
 
 ## TODO and Issues
 * LCD doesn't currently work.
-* There seems to be a problem with Linux using the upper 16MB of the flash chip (4-byte addressing mode) and so it's currently only using the first 16MB of the chip.
+* The **sunxi-fel** program is unable to write to the top 16MiB of the flash, and so the rootfs is effectively limited to 16MB. However, once the system if flashed it can be resized within Linux.
 * Convert to a UBI image and file system in the future.
 
 ## Asknowledgments
