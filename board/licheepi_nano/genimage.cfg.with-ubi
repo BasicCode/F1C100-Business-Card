@@ -1,0 +1,49 @@
+flash xt25f128 {
+	pebsize = 65536
+	lebsize = 65408
+	numpebs = 256
+	minimum-io-unit-size = 1
+	sub-page-size = 1
+	vid-header-offset = 64
+}
+
+image flash.bin {
+	flash {}
+	flashtype = xt25f128
+	partition uboot {
+		image = "u-boot-sunxi-with-spl.bin"
+		size = 1M
+	}
+	partition rootubi {
+		image = root.ubi
+		size = 0
+	}
+}
+
+image persist.ubifs {
+	ubifs {
+		extraargs = "--compr=lzo --jrn-size=256KiB --log-lebs=2"
+	}
+	size=3M
+	flashtype = xt25f128
+	mountpoint = /root
+}
+
+image root.ubi {
+	ubi {}
+	partition kernel {
+		image = "zImage"
+		read-only = true
+	}
+	partition dtb {
+		image = "licheepi-nano.dtb"
+		read-only = true
+	}
+	partition root {
+		image = "rootfs.squashfs"
+		read-only = true
+	}
+	partition persist {
+		image = persist.ubifs
+	}
+}
