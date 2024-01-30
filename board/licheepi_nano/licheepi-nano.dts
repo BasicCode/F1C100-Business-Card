@@ -84,7 +84,7 @@
 	status = "okay";
 
 	panel: panel@0{
-		compatible = "ilitek,ili9341";
+		compatible = "jianda,jd-t18003-t01", "sitronix,st7735r";
 		reg = <0>;
 		spi-max-frequency = <32000000>;
 		dc-gpios = <&pio 3 16 GPIO_ACTIVE_HIGH>; //PD16

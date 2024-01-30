@@ -9,7 +9,7 @@ CONFIG_DRAM_ZQ=0
 # CONFIG_VIDEO_SUNXI is not set
 CONFIG_SPL_SPI_SUNXI=y
 CONFIG_USE_BOOTARGS=y
-CONFIG_BOOTARGS="console=tty0 console=ttyS0,115200 root=/dev/mtdblock3 rootfstype=jffs2"
+CONFIG_BOOTARGS="console=tty0 console=ttyS0,115200 rootwait root=/dev/mtdblock3 rw rootfstype=jffs2"
 CONFIG_BOOTCOMMAND="sf probe 0; sf read ${kernel_addr_r} 0x110000 0x4f0000; sf read ${fdt_addr_r} 0x100000 0x10000; bootz ${kernel_addr_r} - ${fdt_addr_r}"
 CONFIG_SPL_SPI_FLASH_MTD=y
 CONFIG_SYS_MAXARGS=32
