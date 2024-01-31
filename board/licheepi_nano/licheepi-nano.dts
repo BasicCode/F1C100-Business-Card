@@ -89,7 +89,7 @@
 		spi-max-frequency = <32000000>;
 		dc-gpios = <&pio 3 16 GPIO_ACTIVE_HIGH>; //PD16
 		reset-gpios = <&pio 3 17 GPIO_ACTIVE_HIGH>; //PD17
-		rotation = <90>;
+		rotation = <270>;
 	};
 };
 
