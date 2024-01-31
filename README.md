@@ -11,7 +11,7 @@ A simple business-card sized system based on an F1C100 SoC featuring:
 The board was build by JLCPCB and the project is available [here](https://oshwlab.com/tommy_tom2000/f1c100-business-card)
 
 ## TODO and Issues
-* LCD doesn't currently work.
+* USB port doesn't seem to register new devices. Works in FEL mode.
 * The **sunxi-fel** program is unable to write to the top 16MiB of the flash, and so the rootfs is effectively limited to 16MB. However, once the system if flashed it can be resized within Linux.
 * Convert to a UBI image and file system in the future.
 
