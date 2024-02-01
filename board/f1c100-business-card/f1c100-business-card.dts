@@ -4,7 +4,7 @@
  */
 
 /dts-v1/;
-#include "licheepi-nano.dtsi"
+#include "f1c100-business-card.dtsi"
 #include <dt-bindings/gpio/gpio.h>
 
 / {

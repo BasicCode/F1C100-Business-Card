@@ -1,0 +1,17 @@
+Modifies the default SPI rate. I don't know if this is the 
+lazy way to change it, but changing the CONFIG options doesn't 
+seem to make a difference.
+
+diff --git a/drivers/spi/spi-sunxi.c b/drivers/spi/spi-sunxi.c
+index 35306ae..c56d82d 100644
+--- a/drivers/spi/spi-sunxi.c
++++ b/drivers/spi/spi-sunxi.c
+@@ -82,7 +82,7 @@ DECLARE_GLOBAL_DATA_PTR;
+ #define SUN4I_SPI_MAX_RATE		SUNXI_INPUT_CLOCK
+ #endif
+ #define SUN4I_SPI_MIN_RATE		3000
+-#define SUN4I_SPI_DEFAULT_RATE		24000000
++#define SUN4I_SPI_DEFAULT_RATE		1000000
+ #define SUN4I_SPI_TIMEOUT_MS		1000
+ 
+ #define SPI_REG(priv, reg)		((priv)->base + \
