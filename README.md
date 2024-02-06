@@ -31,8 +31,9 @@ BR2_EXTERNAL=../F1C100-Business-Card make f1c100-business-card_defconfig
 * The **sunxi-fel** program is unable to write to the top 16MiB of the flash, and so the rootfs is effectively limited to 16MB. However, once the system if flashed it can be resized within Linux.
 * Convert to a UBI image and file system in the future.
 * Push Button GPIO Port Numbers:
+  
 | BUTTON | PIN     | gpiochip0 number |
-|---------|---------|------------------|
+|--------|---------|------------------|
 | RIGHT | PE3  | 131 |
 | UP    | PE4  | 132 |
 | DOWN  | PE5  | 133 |
