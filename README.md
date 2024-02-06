@@ -30,6 +30,16 @@ BR2_EXTERNAL=../F1C100-Business-Card make f1c100-business-card_defconfig
 * USB port doesn't seem to register new devices. Works in FEL mode.
 * The **sunxi-fel** program is unable to write to the top 16MiB of the flash, and so the rootfs is effectively limited to 16MB. However, once the system if flashed it can be resized within Linux.
 * Convert to a UBI image and file system in the future.
+* Push Button GPIO Port Numbers:
+| BUTTON | PIN     | gpiochip0 number |
+|---------|---------|------------------|
+| RIGHT | PE3  | 131 |
+| UP    | PE4  | 132 |
+| DOWN  | PE5  | 133 |
+| LEFT  | PE6  | 134 |
+| A     | PE12 | 140 |
+| B     | PE11 | 139 |
+| C     | PD15 | 111 |
 
 ## Asknowledgments
 This project is based heavily on the work of others; I would like to acknowledge these project in particular:
