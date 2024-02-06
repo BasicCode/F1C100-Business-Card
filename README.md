@@ -41,6 +41,16 @@ BR2_EXTERNAL=../F1C100-Business-Card make f1c100-business-card_defconfig
 | A     | PE12 | 140 |
 | B     | PE11 | 139 |
 | C     | PD15 | 111 |
+  
+You can read the GPIO value using the GPIO export system:
+```
+echo 131 > /sys/class/gpio/export
+cat /sys/class/gpio/gpio131/value
+```
+OR by using GPIO tools:
+```
+gpioget gpiochip0 131
+```
 
 ## Asknowledgments
 This project is based heavily on the work of others; I would like to acknowledge these project in particular:
