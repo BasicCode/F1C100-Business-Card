@@ -24,6 +24,7 @@
 		regulator-name = "vcc3v3";
 		regulator-min-microvolt = <3300000>;
 		regulator-max-microvolt = <3300000>;
+		regulator-always-on;
 	};
 };
 
@@ -99,12 +100,16 @@
 	status = "okay";
 };
 
+&otg_sram {
+	status = "okay";
+};
+
 &usb_otg {
-	dr_mode = "otg";
+	dr_mode = "host";
 	status = "okay";
 };
 
 &usbphy {
-	usb0_id_det-gpio = <&pio 4 2 GPIO_ACTIVE_HIGH>; /* PE2 */
+	usb0_id_det = <&pio 4 3 GPIO_ACTIVE_HIGH>; /* PE3 */
 	status = "okay";
 };
