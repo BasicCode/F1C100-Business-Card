@@ -57,3 +57,4 @@ This project is based heavily on the work of others; I would like to acknowledge
 * https://github.com/thirtythreeforty/businesscard-linux/tree/master
 * https://github.com/florpor/licheepi-nano/tree/master
 * [F1C100 Datasheet](https://whycan.com/files/members/3/F1C100s_Datasheet_V1_0.pdf)
+* [Lichee-Pi Nano](https://wiki.sipeed.com/hardware/en/lichee/Nano/Nano.html) 
